@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
 import { Button } from 'antd';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
-const App: React.FC = () => (
-  <div className="App">
-    <h1 className='text-3xl font-bold underline'>hello world!</h1>
-    <Button type="primary">Button</Button>
-  </div>
-);
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 export default App;
